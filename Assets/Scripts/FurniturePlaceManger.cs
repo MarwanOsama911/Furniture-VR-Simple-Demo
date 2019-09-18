@@ -5,14 +5,18 @@ using VRTK;
 
 public class FurniturePlaceManger : MonoBehaviour
 {
-    public VRTK_StraightPointerRenderer pointerRenderer;
     public GameObject furnitureModel;
+    public Material material;
 
-    public void GenerateFurnitureModel()
+    public void FurnitureUseClick()
     {
-        print("position to place :" + pointerRenderer.GetActualCursor().transform.position);
-        GameObject @object =  Instantiate(furnitureModel, pointerRenderer.GetActualCursor().transform.position, pointerRenderer.GetActualCursor().transform.rotation);
-        @object.transform.parent = pointerRenderer.transform;
+        furnitureModel.GetComponent<Renderer>().material = material;
+        FloorManager.Instance.flag = true;
+        FloorManager.Instance.furnitureModelGame = furnitureModel;
     }
 
+    public void ResetFlag()
+    {
+        FloorManager.Instance.flag = false;
+    }
 }

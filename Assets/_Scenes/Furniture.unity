@@ -191,6 +191,76 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2642064}
   m_CullTransparentMesh: 0
+--- !u!1 &62386264
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 62386266}
+  - component: {fileID: 62386265}
+  m_Layer: 0
+  m_Name: Game Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &62386265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 62386264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5750dcde5edf1f14cbf0faf1a5ea6e37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointerRenderer: {fileID: 0}
+  furnitureModelGame: {fileID: 0}
+  flag: 0
+--- !u!4 &62386266
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 62386264}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.23948717, y: 0.49208602, z: -0.5331473}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &123344456
 GameObject:
   m_ObjectHideFlags: 0
@@ -419,7 +489,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &204095683
 GameObject:
@@ -836,6 +906,7 @@ GameObject:
   - component: {fileID: 411163562}
   - component: {fileID: 411163566}
   - component: {fileID: 411163567}
+  - component: {fileID: 411163568}
   m_Layer: 5
   m_Name: 'Tables Button '
   m_TagString: Untagged
@@ -1030,6 +1101,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 411163568}
+        m_MethodName: ResetFlag
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: VRTK.UnityEventHelper.VRTK_InteractableObject_UnityEvents+InteractableObjectEvent,
       Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   OnUnuse:
@@ -1149,6 +1231,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 147.23625, y: 22.823639, z: 4.5217385}
   m_Center: {x: -0.66327494, y: -0.12472862, z: -1.7610009}
+--- !u!114 &411163568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 411163557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5606bb8ca1dd4794e87843f32934c30e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  furnitureModel: {fileID: 0}
+  material: {fileID: 0}
 --- !u!1 &446854239
 GameObject:
   m_ObjectHideFlags: 0
@@ -1167,6 +1263,7 @@ GameObject:
   - component: {fileID: 446854243}
   - component: {fileID: 446854242}
   - component: {fileID: 446854241}
+  - component: {fileID: 446854250}
   m_Layer: 5
   m_Name: Button (1)
   m_TagString: Untagged
@@ -1282,7 +1379,18 @@ MonoBehaviour:
       Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   OnUnuse:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 446854250}
+        m_MethodName: FurnitureUseClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: VRTK.UnityEventHelper.VRTK_InteractableObject_UnityEvents+InteractableObjectEvent,
       Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   OnEnterSnapDropZone:
@@ -1447,6 +1555,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 446854239}
   m_CullTransparentMesh: 0
+--- !u!114 &446854250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 446854239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5606bb8ca1dd4794e87843f32934c30e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  furnitureModel: {fileID: 8145589537131986376, guid: 7867458691ecb264795cf2bee0f7f87e,
+    type: 3}
+  material: {fileID: 2100000, guid: 0ced0e2f82e6399468861a9522fdd6f1, type: 2}
 --- !u!1 &457408153
 GameObject:
   m_ObjectHideFlags: 0
@@ -1763,7 +1886,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 485700568}
-        m_MethodName: GenerateFurnitureModel
+        m_MethodName: FurnitureUseClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1949,9 +2072,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5606bb8ca1dd4794e87843f32934c30e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointerRenderer: {fileID: 1783948455}
   furnitureModel: {fileID: 8145589537131986376, guid: 7867458691ecb264795cf2bee0f7f87e,
     type: 3}
+  material: {fileID: 2100000, guid: 1f99707303e3a784dbdfced29ea514f8, type: 2}
 --- !u!1 &495555556
 GameObject:
   m_ObjectHideFlags: 0
@@ -2116,6 +2239,7 @@ GameObject:
   - component: {fileID: 581058529}
   - component: {fileID: 581058528}
   - component: {fileID: 581058527}
+  - component: {fileID: 581058536}
   m_Layer: 5
   m_Name: Button (3)
   m_TagString: Untagged
@@ -2230,6 +2354,17 @@ MonoBehaviour:
       - m_Target: {fileID: 1987027745}
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 581058536}
+        m_MethodName: ResetFlag
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2407,6 +2542,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 581058525}
   m_CullTransparentMesh: 0
+--- !u!114 &581058536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 581058525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5606bb8ca1dd4794e87843f32934c30e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  furnitureModel: {fileID: 0}
+  material: {fileID: 0}
 --- !u!1 &638264289
 GameObject:
   m_ObjectHideFlags: 0
@@ -2425,6 +2574,7 @@ GameObject:
   - component: {fileID: 638264293}
   - component: {fileID: 638264292}
   - component: {fileID: 638264291}
+  - component: {fileID: 638264300}
   m_Layer: 5
   m_Name: Button (5)
   m_TagString: Untagged
@@ -2539,6 +2689,17 @@ MonoBehaviour:
       - m_Target: {fileID: 376206419}
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 638264300}
+        m_MethodName: ResetFlag
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2716,6 +2877,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 638264289}
   m_CullTransparentMesh: 0
+--- !u!114 &638264300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 638264289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5606bb8ca1dd4794e87843f32934c30e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  furnitureModel: {fileID: 0}
+  material: {fileID: 0}
 --- !u!1 &647383224
 GameObject:
   m_ObjectHideFlags: 0
@@ -2826,7 +3001,7 @@ Transform:
   - {fileID: 3383026910719522370}
   - {fileID: 1142998462}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &697720397
 MonoBehaviour:
@@ -3191,6 +3366,7 @@ GameObject:
   - component: {fileID: 900179253}
   - component: {fileID: 900179257}
   - component: {fileID: 900179258}
+  - component: {fileID: 900179259}
   m_Layer: 5
   m_Name: Stages Button
   m_TagString: Untagged
@@ -3385,6 +3561,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 900179259}
+        m_MethodName: ResetFlag
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
     m_TypeName: VRTK.UnityEventHelper.VRTK_InteractableObject_UnityEvents+InteractableObjectEvent,
       Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   OnUnuse:
@@ -3504,6 +3691,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 147.23625, y: 22.823639, z: 4.5217385}
   m_Center: {x: -0.66327494, y: -0.12472862, z: -1.7610009}
+--- !u!114 &900179259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 900179248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5606bb8ca1dd4794e87843f32934c30e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  furnitureModel: {fileID: 0}
+  material: {fileID: 0}
 --- !u!1 &993721989
 GameObject:
   m_ObjectHideFlags: 0
@@ -3516,6 +3717,11 @@ GameObject:
   - component: {fileID: 993721992}
   - component: {fileID: 993721991}
   - component: {fileID: 993721990}
+  - component: {fileID: 993721998}
+  - component: {fileID: 993721997}
+  - component: {fileID: 993721996}
+  - component: {fileID: 993721995}
+  - component: {fileID: 993721994}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Floor
@@ -3594,8 +3800,179 @@ Transform:
   m_LocalScale: {x: 10, y: 1, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &993721994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 993721989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 821f979771ee5404f9d39b3aba35aba0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointerRenderer: {fileID: 1783948455}
+  furnitureModelGame: {fileID: 0}
+  flag: 0
+--- !u!114 &993721995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 993721989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f96f1837f21d4bf9a77ff61e7b81f20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnObjectEnable:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_InteractableObject_UnityEvents+InteractableObjectEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnObjectDisable:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_InteractableObject_UnityEvents+InteractableObjectEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnNearTouch:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_InteractableObject_UnityEvents+InteractableObjectEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnNearUntouch:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_InteractableObject_UnityEvents+InteractableObjectEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnTouch:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_InteractableObject_UnityEvents+InteractableObjectEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnUntouch:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_InteractableObject_UnityEvents+InteractableObjectEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnGrab:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_InteractableObject_UnityEvents+InteractableObjectEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnUngrab:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_InteractableObject_UnityEvents+InteractableObjectEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnUse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 993721994}
+        m_MethodName: GenerateFurnitureModel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: VRTK.UnityEventHelper.VRTK_InteractableObject_UnityEvents+InteractableObjectEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnUnuse:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_InteractableObject_UnityEvents+InteractableObjectEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnEnterSnapDropZone:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_InteractableObject_UnityEvents+InteractableObjectEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnExitSnapDropZone:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_InteractableObject_UnityEvents+InteractableObjectEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnSnapToDropZone:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_InteractableObject_UnityEvents+InteractableObjectEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  OnUnsnapFromDropZone:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: VRTK.UnityEventHelper.VRTK_InteractableObject_UnityEvents+InteractableObjectEvent,
+      Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+--- !u!114 &993721996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 993721989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18055ba762aa3994f9c10208cd088bc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &993721997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 993721989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ec2ac476f2fc9a45a4e69712580a603, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  precisionGrab: 0
+  rightSnapHandle: {fileID: 0}
+  leftSnapHandle: {fileID: 0}
+  throwVelocityWithAttachDistance: 0
+  throwMultiplier: 1
+  onGrabCollisionDelay: 0
+--- !u!114 &993721998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 993721989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3abaf4521bf2344ea21ed3020b98eb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  disableWhenIdle: 0
+  allowedNearTouchControllers: 0
+  allowedTouchControllers: 0
+  ignoredColliders: []
+  isGrabbable: 0
+  holdButtonToGrab: 0
+  stayGrabbedOnTeleport: 1
+  validDrop: 1
+  grabOverrideButton: 0
+  allowedGrabControllers: 0
+  grabAttachMechanicScript: {fileID: 993721997}
+  secondaryGrabActionScript: {fileID: 993721996}
+  isUsable: 1
+  holdButtonToUse: 1
+  useOnlyIfGrabbed: 0
+  pointerActivatesUseAction: 0
+  useOverrideButton: 0
+  allowedUseControllers: 0
+  objectHighlighter: {fileID: 0}
+  touchHighlightColor: {r: 0, g: 0, b: 0, a: 0}
+  usingState: 0
 --- !u!1 &1005578666
 GameObject:
   m_ObjectHideFlags: 0
@@ -3693,6 +4070,7 @@ GameObject:
   - component: {fileID: 1007446575}
   - component: {fileID: 1007446574}
   - component: {fileID: 1007446573}
+  - component: {fileID: 1007446582}
   m_Layer: 5
   m_Name: Button (2)
   m_TagString: Untagged
@@ -3803,7 +4181,18 @@ MonoBehaviour:
       Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   OnUse:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1007446582}
+        m_MethodName: FurnitureUseClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: VRTK.UnityEventHelper.VRTK_InteractableObject_UnityEvents+InteractableObjectEvent,
       Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   OnUnuse:
@@ -3973,6 +4362,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1007446571}
   m_CullTransparentMesh: 0
+--- !u!114 &1007446582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1007446571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5606bb8ca1dd4794e87843f32934c30e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  furnitureModel: {fileID: 7127060846181428429, guid: 78d2f2bfa2f331f4faab8a1a788de878,
+    type: 3}
+  material: {fileID: 2100000, guid: 088c03f004fb68b4eb5f12ae641c2997, type: 2}
 --- !u!1001 &1142998461
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4449,6 +4853,7 @@ GameObject:
   - component: {fileID: 1292353808}
   - component: {fileID: 1292353812}
   - component: {fileID: 1292353813}
+  - component: {fileID: 1292353814}
   m_Layer: 5
   m_Name: Chairs Button
   m_TagString: Untagged
@@ -4643,6 +5048,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1292353814}
+        m_MethodName: ResetFlag
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: VRTK.UnityEventHelper.VRTK_InteractableObject_UnityEvents+InteractableObjectEvent,
       Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   OnUnuse:
@@ -4762,6 +5178,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 147.23625, y: 22.823639, z: 4.5217385}
   m_Center: {x: -0.66327494, y: -0.12472862, z: -1.7610009}
+--- !u!114 &1292353814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1292353803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5606bb8ca1dd4794e87843f32934c30e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  furnitureModel: {fileID: 0}
+  material: {fileID: 0}
 --- !u!1 &1302712483
 GameObject:
   m_ObjectHideFlags: 0
@@ -4859,6 +5289,7 @@ GameObject:
   - component: {fileID: 1315513285}
   - component: {fileID: 1315513284}
   - component: {fileID: 1315513283}
+  - component: {fileID: 1315513292}
   m_Layer: 5
   m_Name: Button (1)
   m_TagString: Untagged
@@ -4969,7 +5400,18 @@ MonoBehaviour:
       Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   OnUse:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1315513292}
+        m_MethodName: FurnitureUseClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: VRTK.UnityEventHelper.VRTK_InteractableObject_UnityEvents+InteractableObjectEvent,
       Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   OnUnuse:
@@ -5139,6 +5581,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1315513281}
   m_CullTransparentMesh: 0
+--- !u!114 &1315513292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1315513281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5606bb8ca1dd4794e87843f32934c30e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  furnitureModel: {fileID: 4592235870323729888, guid: 18c57bd2ca7c5c14281b6b30960af150,
+    type: 3}
+  material: {fileID: 2100000, guid: cb83b302df408aa4dbd990975ad9d414, type: 2}
 --- !u!1 &1496670250
 GameObject:
   m_ObjectHideFlags: 0
@@ -5157,6 +5614,7 @@ GameObject:
   - component: {fileID: 1496670254}
   - component: {fileID: 1496670253}
   - component: {fileID: 1496670252}
+  - component: {fileID: 1496670261}
   m_Layer: 5
   m_Name: Button (2)
   m_TagString: Untagged
@@ -5267,7 +5725,18 @@ MonoBehaviour:
       Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   OnUse:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1496670261}
+        m_MethodName: FurnitureUseClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: VRTK.UnityEventHelper.VRTK_InteractableObject_UnityEvents+InteractableObjectEvent,
       Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   OnUnuse:
@@ -5437,6 +5906,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1496670250}
   m_CullTransparentMesh: 0
+--- !u!114 &1496670261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1496670250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5606bb8ca1dd4794e87843f32934c30e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  furnitureModel: {fileID: 4592235870323729888, guid: 18c57bd2ca7c5c14281b6b30960af150,
+    type: 3}
+  material: {fileID: 2100000, guid: f268b4103ae80b24eb7c1e724eeaf520, type: 2}
 --- !u!1 &1503588191
 GameObject:
   m_ObjectHideFlags: 0
@@ -5547,7 +6031,7 @@ Transform:
   - {fileID: 123344457}
   - {fileID: 1783948453}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1674427597
 GameObject:
@@ -5646,6 +6130,7 @@ GameObject:
   - component: {fileID: 1710192163}
   - component: {fileID: 1710192162}
   - component: {fileID: 1710192161}
+  - component: {fileID: 1710192170}
   m_Layer: 5
   m_Name: Button (2)
   m_TagString: Untagged
@@ -5756,7 +6241,18 @@ MonoBehaviour:
       Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   OnUse:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1710192170}
+        m_MethodName: FurnitureUseClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: VRTK.UnityEventHelper.VRTK_InteractableObject_UnityEvents+InteractableObjectEvent,
       Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   OnUnuse:
@@ -5926,6 +6422,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1710192159}
   m_CullTransparentMesh: 0
+--- !u!114 &1710192170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1710192159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5606bb8ca1dd4794e87843f32934c30e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  furnitureModel: {fileID: 8145589537131986376, guid: 7867458691ecb264795cf2bee0f7f87e,
+    type: 3}
+  material: {fileID: 2100000, guid: 27337ab94d8549e4ba65cc392d8f8e28, type: 2}
 --- !u!1 &1783948452
 GameObject:
   m_ObjectHideFlags: 0
@@ -6140,6 +6651,7 @@ GameObject:
   - component: {fileID: 1799974520}
   - component: {fileID: 1799974519}
   - component: {fileID: 1799974518}
+  - component: {fileID: 1799974527}
   m_Layer: 5
   m_Name: Button (4)
   m_TagString: Untagged
@@ -6254,6 +6766,17 @@ MonoBehaviour:
       - m_Target: {fileID: 2137042945}
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1799974527}
+        m_MethodName: ResetFlag
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -6431,6 +6954,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1799974516}
   m_CullTransparentMesh: 0
+--- !u!114 &1799974527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1799974516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5606bb8ca1dd4794e87843f32934c30e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  furnitureModel: {fileID: 0}
+  material: {fileID: 0}
 --- !u!1 &1864653524
 GameObject:
   m_ObjectHideFlags: 0
@@ -6449,6 +6986,7 @@ GameObject:
   - component: {fileID: 1864653528}
   - component: {fileID: 1864653527}
   - component: {fileID: 1864653526}
+  - component: {fileID: 1864653535}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -6559,7 +7097,18 @@ MonoBehaviour:
       Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   OnUse:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1864653535}
+        m_MethodName: FurnitureUseClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: VRTK.UnityEventHelper.VRTK_InteractableObject_UnityEvents+InteractableObjectEvent,
       Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   OnUnuse:
@@ -6729,6 +7278,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1864653524}
   m_CullTransparentMesh: 0
+--- !u!114 &1864653535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1864653524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5606bb8ca1dd4794e87843f32934c30e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  furnitureModel: {fileID: 4592235870323729888, guid: 18c57bd2ca7c5c14281b6b30960af150,
+    type: 3}
+  material: {fileID: 2100000, guid: e1b5b7e1f0507ec4681331cefcc7aa7e, type: 2}
 --- !u!1 &1963266130
 GameObject:
   m_ObjectHideFlags: 0
@@ -6826,6 +7390,7 @@ GameObject:
   - component: {fileID: 1968567632}
   - component: {fileID: 1968567631}
   - component: {fileID: 1968567630}
+  - component: {fileID: 1968567639}
   m_Layer: 5
   m_Name: Button (1)
   m_TagString: Untagged
@@ -6936,7 +7501,18 @@ MonoBehaviour:
       Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   OnUse:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1968567639}
+        m_MethodName: FurnitureUseClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: VRTK.UnityEventHelper.VRTK_InteractableObject_UnityEvents+InteractableObjectEvent,
       Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   OnUnuse:
@@ -7106,6 +7682,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1968567628}
   m_CullTransparentMesh: 0
+--- !u!114 &1968567639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1968567628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5606bb8ca1dd4794e87843f32934c30e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  furnitureModel: {fileID: 7127060846181428429, guid: 78d2f2bfa2f331f4faab8a1a788de878,
+    type: 3}
+  material: {fileID: 2100000, guid: b9a878803c4d4674b8a7b1021a0f4541, type: 2}
 --- !u!1 &1987027745
 GameObject:
   m_ObjectHideFlags: 0
@@ -7203,6 +7794,7 @@ GameObject:
   - component: {fileID: 2012436944}
   - component: {fileID: 2012436943}
   - component: {fileID: 2012436942}
+  - component: {fileID: 2012436951}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -7313,7 +7905,18 @@ MonoBehaviour:
       Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   OnUse:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2012436951}
+        m_MethodName: FurnitureUseClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: VRTK.UnityEventHelper.VRTK_InteractableObject_UnityEvents+InteractableObjectEvent,
       Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   OnUnuse:
@@ -7483,6 +8086,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2012436940}
   m_CullTransparentMesh: 0
+--- !u!114 &2012436951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2012436940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5606bb8ca1dd4794e87843f32934c30e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  furnitureModel: {fileID: 7127060846181428429, guid: 78d2f2bfa2f331f4faab8a1a788de878,
+    type: 3}
+  material: {fileID: 2100000, guid: ea4a0e847ddc86641bab5d87d8825422, type: 2}
 --- !u!1 &2082737810
 GameObject:
   m_ObjectHideFlags: 0
