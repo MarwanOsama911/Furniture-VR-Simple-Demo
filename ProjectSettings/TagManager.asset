@@ -9,6 +9,9 @@ TagManager:
   - FxTemporaire
   - TeleportIgnore
   - Floor
+  - Chairs
+  - Tables
+  - Stages
   layers:
   - Default
   - TransparentFX

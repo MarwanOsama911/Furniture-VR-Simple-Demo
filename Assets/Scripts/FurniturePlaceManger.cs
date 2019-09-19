@@ -17,6 +17,6 @@ public class FurniturePlaceManger : MonoBehaviour
 
     public void ResetFlag()
     {
-        FloorManager.Instance.flag = false;
+        //FloorManager.Instance.flag = false;
     }
 }
