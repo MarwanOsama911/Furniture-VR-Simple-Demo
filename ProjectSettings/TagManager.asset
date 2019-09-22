@@ -12,6 +12,7 @@ TagManager:
   - Chairs
   - Tables
   - Stages
+  - RightController
   layers:
   - Default
   - TransparentFX

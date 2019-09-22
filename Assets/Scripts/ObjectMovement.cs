@@ -13,5 +13,6 @@ public class ObjectMovement : MonoBehaviour
                 0f,
                 FloorManager.Instance.pointerRenderer.GetActualCursor().transform.position.z);
         }
+        
     }
 }

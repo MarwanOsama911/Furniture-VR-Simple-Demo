@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using VRTK;
+using VRTK.Examples;
+
 public class FloorManager : MonoBehaviour
 {
     private static FloorManager _Instance;
 
     public VRTK_StraightPointerRenderer pointerRenderer;
+
     [HideInInspector]
     public List<GameObject> stages = new List<GameObject>();
     [HideInInspector]
@@ -19,6 +22,7 @@ public class FloorManager : MonoBehaviour
     [HideInInspector]
     public bool flag = false;
 
+    
     public static FloorManager Instance
     {
         get { return _Instance; }
@@ -68,7 +72,6 @@ public class FloorManager : MonoBehaviour
             item.GetComponent<Renderer>().material = material;
         }
     }
-
     public void ChangeTablesMaterials(Material material)
     {
         foreach (var item in tables)
@@ -77,7 +80,6 @@ public class FloorManager : MonoBehaviour
         }
 
     }
-
     public void ChangeStagesMaterials(Material material)
     {
         foreach (var item in stages)

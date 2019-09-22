@@ -16,6 +16,8 @@ GameObject:
   - component: {fileID: 165720220555925215}
   - component: {fileID: 4077127261447026880}
   - component: {fileID: 1433777888659391590}
+  - component: {fileID: 8073785896646712907}
+  - component: {fileID: 5262779172700366282}
   m_Layer: 0
   m_Name: table
   m_TagString: Tables
@@ -256,6 +258,31 @@ MonoBehaviour:
   throwVelocityWithAttachDistance: 0
   throwMultiplier: 1
   onGrabCollisionDelay: 0
+--- !u!114 &8073785896646712907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 165720220555925214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1ca34c682c6759459221a9f257dff57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controllerEvenetHandler: {fileID: 0}
+--- !u!114 &5262779172700366282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 165720220555925214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: baf5b5cdbed96a849acd484351e0fb5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7675091880233055313
 GameObject:
   m_ObjectHideFlags: 0
